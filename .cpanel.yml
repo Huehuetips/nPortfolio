@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/hom/\emontejodev001/public_html/
+    - export DEPLOYPATH=/hom/emontejodev001/public_html/
     - /bin/rsync -av public/ $DEPLOYPATH

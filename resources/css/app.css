@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-drag{
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+}
+
+*{
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  font-size: 17px;
+}
+
+@layer base {
+  * {
+    @apply transition-all;
+    @apply ease-in-out;
+    @apply duration-0;
+  }
+}

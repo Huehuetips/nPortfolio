@@ -1,5 +1,13 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/emontejodev001/public_html/
-    - /bin/rsync -av public/ $DEPLOYPATH
+  - copy:
+        source: '/home/emontejodev001/repositories/mi_repo'
+        destination: '/home/emontejodev001/public_html'
+        recursive: true
+        keep: false  # Esto sobrescribirá los archivos existentes en public_html
+    - run:
+        command: 'composer install --no-dev --optimize-autoloader'
+        directory: '/home/emontejodev001/public_html'
+    # - export DEPLOYPATH=/home/emontejodev001/public_html/
+    # - /bin/rsync -av public/ $DEPLOYPATH

@@ -1,13 +1,9 @@
 ---
 deployment:
   tasks:
-  - copy:
-        source: '/home/emontejodev001/repositories/nPortfolio'
-        destination: '/home/emontejodev001/public_html/'
-        recursive: true
-        keep: false  # Esto sobrescribirá los archivos existentes en public_html
-    - run:
-        command: 'composer install --no-dev --optimize-autoloader'
-        directory: '/home/emontejodev001/public_html/'
-    # - export DEPLOYPATH=/home/emontejodev001/public_html/
-    # - /bin/rsync -av public/ $DEPLOYPATH
+    - export DEPLOYPATH=/home/tu-usuario/public_html
+    - cp -r /home/tu-usuario/repositories/mi_repo/* $DEPLOYPATH
+    - cd $DEPLOYPATH && composer install --no-dev --optimize-autoloader
+    - cd $DEPLOYPATH && php artisan config:cache
+    - cd $DEPLOYPATH && php artisan route:cache
+    - cd $DEPLOYPATH && php artisan view:cache

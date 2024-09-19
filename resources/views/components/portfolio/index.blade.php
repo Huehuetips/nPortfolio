@@ -110,12 +110,12 @@
     </div>
     <div class="md:w-[70%] lg:w-4/5 w-full bg-white dark:bg-gradient-to-b from-neutral-900 to-black rounded-2xl shadow-lg shadow-[rgba(0,0,0,0.35)] dark:shadow-[rgba(150,150,150,0.23)] p-6">
         <livewire:portfolio.contents :tabs="[
-            ['title' => 'Contacto', 'component' => 'x-portfolio.contact'],
             ['title' => 'Proyectos', 'component' => 'x-portfolio.projects'],
+            ['title' => 'Servicios', 'component' => 'x-portfolio.services'],
             ['title' => 'Formación', 'component' => 'x-portfolio.training'],
             ['title' => 'Lenguajes', 'component' => 'x-portfolio.languajes'],
             ['title' => 'Experiencia', 'component' => 'x-portfolio.experience'],
-            ['title' => 'Servicios', 'component' => 'x-portfolio.services'],
+            ['title' => 'Contacto', 'component' => 'x-portfolio.contact'],
         ]" />
     </div>
 </div>

@@ -3,7 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tu-usuario/public_html
     - cp -r /home/tu-usuario/repositories/mi_repo/* $DEPLOYPATH
-    - cd $DEPLOYPATH && composer install --no-dev --optimize-autoloader
-    - cd $DEPLOYPATH && php artisan config:cache
-    - cd $DEPLOYPATH && php artisan route:cache
-    - cd $DEPLOYPATH && php artisan view:cache

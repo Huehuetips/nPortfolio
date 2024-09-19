@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tu-usuario/public_html
-    - cp -r /home/tu-usuario/repositories/mi_repo/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/emontejodev001/public_html/
+    - /bin/rsync -av public/ $DEPLOYPATH
